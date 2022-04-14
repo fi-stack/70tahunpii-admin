@@ -1,16 +1,16 @@
-const stateParticipantDetails = {
-  participant_details: {},
+const stateParticipants = {
+  participants: [],
 };
 
-const participantDetails = (state = stateParticipantDetails, action) => {
-  if (action.type === "GET_PARTICIPANT_DETAILS") {
+const participants = (state = stateParticipants, action) => {
+  if (action.type === "GET_PARTICIPANTS") {
     return {
       ...state,
-      participant_details: action.payload,
+      participants: action.payload,
     };
   }
 
   return state;
 };
 
-export { participantDetails };
+export { participants };

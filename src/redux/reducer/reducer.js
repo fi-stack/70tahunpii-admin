@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import { admin } from "./admin";
-import { participantDetails } from "./participant";
+import { participants } from "./participant";
 
 const reducer = combineReducers({
   admin,
-  participantDetails,
+  participants,
 });
 
 export default reducer;

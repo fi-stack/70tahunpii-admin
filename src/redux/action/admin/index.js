@@ -36,7 +36,9 @@ const getAdmin = () => (dispatch) => {
       dispatch({ type: "GET_ADMIN", payload: res.data.data });
     })
     .catch((err) => {
-      console.log(err.response);
+      if (err.response) {
+        localStorage.removeItem("admin-token");
+      }
     });
 };
 
