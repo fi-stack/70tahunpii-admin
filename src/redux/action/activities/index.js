@@ -19,4 +19,17 @@ const getActivityDetails =
       })
       .catch((err) => console.log(err.response));
   };
-export { getActivities, getActivityDetails };
+
+const validationActivity = (id, form) => {
+  return new Promise((resolve, reject) => {
+    Api.post(`/activities/manual-validation/${id}`, form)
+      .then((res) => {
+        resolve(res.data);
+      })
+      .catch((err) => {
+        reject(err.response.data);
+      });
+  });
+};
+
+export { getActivities, getActivityDetails, validationActivity };

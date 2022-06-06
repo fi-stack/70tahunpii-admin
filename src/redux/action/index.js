@@ -13,7 +13,11 @@ import {
   getPodiumFinisherExcel,
 } from "./participant";
 import { getProvinces, getCities } from "./address";
-import { getActivities, getActivityDetails } from "./activities";
+import {
+  getActivities,
+  getActivityDetails,
+  validationActivity,
+} from "./activities";
 
 export {
   storeRegister,
@@ -34,4 +38,5 @@ export {
   getPodiumFinisherExcel,
   getActivities,
   getActivityDetails,
+  validationActivity,
 };
